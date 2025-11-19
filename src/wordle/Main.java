@@ -7,7 +7,6 @@ public class Main {
         Wordle newGame = new Wordle();
         String word = newGame.generateWord();
         boolean solved = false;
-        System.out.println(word);
 
         for(int i=1; i < 7; i++){
             String playerInput = newGame.getInput();
