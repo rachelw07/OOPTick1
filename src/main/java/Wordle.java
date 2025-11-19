@@ -34,14 +34,13 @@ public class Wordle {
     }
 
     public String getInput() {
-        try (Scanner scanner = new Scanner(System.in)) { // try with resource automatically closes scanner
-            String inputWord = "";
-            while (!checkInput(inputWord)) {
-                System.out.println("Enter a 5 letter word");
-                inputWord = scanner.nextLine();
-            }
-            return inputWord;
+        Scanner scanner = new Scanner(System.in);
+        String inputWord = "";
+        while (!checkInput(inputWord)) {
+            System.out.println("Enter a 5 letter word");
+            inputWord = scanner.nextLine();
         }
+        return inputWord;
     }
 
     public boolean checkInput(String input) {
